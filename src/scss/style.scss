@@ -1,6 +1,7 @@
 $amarilloLab: rgb(247, 182, 23);
 $grisLab: rgb(43, 43, 43);
 $col-size: 8.3333%;
+$col-medium-size: 8.3333%;
 $list-deco: none;
 $margen-cero: 0;
 $padding-titulo: 1em;
@@ -11,6 +12,9 @@ $font-size-titulo: 1.2em;
 $font-size-texto: 1em;
 $texto-centrado: center;
 $texto-justificado: justify;
+$display-grid: inline-grid;
+$break-small: 320px;
+$break-large: 1200px;
 
 #capitan{
 	background-color: $amarilloLab;
@@ -23,7 +27,6 @@ $texto-justificado: justify;
 
 #liAmarillo{
 	list-style: $list-deco;
-	width: $col-size * 2;
 	margin: $margen-lista;
 	padding: $padding-lista;
 	color: $texto-blanco;
@@ -40,11 +43,22 @@ $texto-justificado: justify;
 }
 #lista{
 	margin: $margen-cero;
+	width: $col-size * 3;
+	display: $display-grid;
+	@media screen and (max-width: $break-small) {
+    width: 100%;
+    margin-left: -20px;
+  }
 }
 #descripcion{
-	width: $col-size * 6;
+	width: $col-size * 5;
 	text-align: $texto-justificado;
 	margin: $margen-cero;
+	display: $display-grid;
+	@media screen and (max-width: $break-small) {
+    width: 100%;
+    margin: $margen-cero;
+  }
 }
 .aside{
 	background-color: $grisLab;
@@ -52,7 +66,18 @@ $texto-justificado: justify;
 	color: $texto-blanco;
 	margin: $margen-cero;
 	width: $col-size * 3;
+	display: $display-grid;
+	padding: 0;
+	@media screen and (max-width: $break-small) {
+    width: 100%;
+    margin: $margen-cero;
+  }
 }
-.container{
-	display: grid;
+#footer{
+	width: $col-size * 12;
+	text-align: $texto-centrado;
+	background-color: $grisLab;
+	color: $texto-blanco;
+	padding: $padding-lista;
+	margin: $margen-cero;
 }
