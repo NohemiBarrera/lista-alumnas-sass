@@ -1,0 +1,58 @@
+$amarilloLab: rgb(247, 182, 23);
+$grisLab: rgb(43, 43, 43);
+$col-size: 8.3333%;
+$list-deco: none;
+$margen-cero: 0;
+$padding-titulo: 1em;
+$padding-lista: .5em;
+$margen-lista: 10px;
+$texto-blanco: white;
+$font-size-titulo: 1.2em;
+$font-size-texto: 1em;
+$texto-centrado: center;
+$texto-justificado: justify;
+
+#capitan{
+	background-color: $amarilloLab;
+	width: $col-size * 12;
+	margin: $margen-cero;
+	padding: $padding-titulo;
+	color: $texto-blanco;
+	font-size: $font-size-titulo;
+}
+
+#liAmarillo{
+	list-style: $list-deco;
+	width: $col-size * 2;
+	margin: $margen-lista;
+	padding: $padding-lista;
+	color: $texto-blanco;
+	font-size: $font-size-texto;
+}
+.liGris{
+	@extend #liAmarillo;
+}
+#liAmarillo{
+	background-color: $amarilloLab;
+}
+.liGris{
+	background-color: $grisLab;
+}
+#lista{
+	margin: $margen-cero;
+}
+#descripcion{
+	width: $col-size * 6;
+	text-align: $texto-justificado;
+	margin: $margen-cero;
+}
+.aside{
+	background-color: $grisLab;
+	text-align: $texto-centrado;
+	color: $texto-blanco;
+	margin: $margen-cero;
+	width: $col-size * 3;
+}
+.container{
+	display: grid;
+}
