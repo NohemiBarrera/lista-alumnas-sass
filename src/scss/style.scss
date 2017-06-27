@@ -14,6 +14,7 @@ $texto-centrado: center;
 $texto-justificado: justify;
 $display-grid: inline-grid;
 $break-small: 320px;
+$break-medium: 768px;
 $break-large: 1200px;
 
 #capitan{
@@ -49,6 +50,10 @@ $break-large: 1200px;
     width: 100%;
     margin-left: -20px;
   }
+  	@media screen and (max-width: $break-medium){
+  	width: 50%;
+    margin-left: -20px;
+  }
 }
 #descripcion{
 	width: $col-size * 5;
@@ -72,6 +77,10 @@ $break-large: 1200px;
     width: 100%;
     margin: $margen-cero;
   }
+  @media screen and (max-width: $break-medium){
+  	width: 100%;
+    margin-left: -20px;
+  }
 }
 #footer{
 	width: $col-size * 12;
@@ -79,5 +88,6 @@ $break-large: 1200px;
 	background-color: $grisLab;
 	color: $texto-blanco;
 	padding: $padding-lista;
-	margin: $margen-cero;
+	margin-top: $margen-lista;
+	margin-right: $margen-cero;
 }

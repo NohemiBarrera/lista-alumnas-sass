@@ -27,6 +27,10 @@
     #lista {
       width: 100%;
       margin-left: -20px; } }
+  @media screen and (max-width: 768px) {
+    #lista {
+      width: 50%;
+      margin-left: -20px; } }
 
 #descripcion {
   width: 41.6665%;
@@ -50,6 +54,10 @@
     .aside {
       width: 100%;
       margin: 0; } }
+  @media screen and (max-width: 768px) {
+    .aside {
+      width: 100%;
+      margin-left: -20px; } }
 
 #footer {
   width: 99.9996%;
@@ -57,6 +65,7 @@
   background-color: #2b2b2b;
   color: white;
   padding: 0.5em;
-  margin: 0; }
+  margin-top: 10px;
+  margin-right: 0; }
 
 /*# sourceMappingURL=style.css.map */
