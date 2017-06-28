@@ -40,7 +40,8 @@ body {
 #descripcion {
   text-align: justify;
   width: 41.6665%;
-  margin: 0; }
+  margin: 0;
+  display: inline-grid; }
   @media screen and (max-width: 320px) {
     #descripcion {
       width: 100%;
