@@ -61,8 +61,7 @@ body {
       margin: 0; } }
   @media screen and (max-width: 768px) {
     .aside {
-      width: 100%;
-      margin-left: -20px; } }
+      width: 100%; } }
 
 #footer {
   width: 99.9996%;
