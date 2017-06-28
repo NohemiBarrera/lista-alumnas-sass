@@ -1,21 +1,5 @@
-$amarilloLab: rgb(247, 182, 23);
-$grisLab: rgb(43, 43, 43);
-$col-size: 8.3333%;
-$col-medium-size: 8.3333%;
-$list-deco: none;
-$margen-cero: 0;
-$padding-titulo: 1em;
-$padding-lista: .5em;
-$margen-lista: 10px;
-$texto-blanco: white;
-$font-size-titulo: 1.2em;
-$font-size-texto: 1em;
-$texto-centrado: center;
-$texto-justificado: justify;
-$display-grid: inline-grid;
-$break-small: 320px;
-$break-medium: 768px;
-$break-large: 1200px;
+@import 'mixin';
+@import 'variables';
 
 #capitan{
 	background-color: $amarilloLab;
@@ -43,9 +27,7 @@ $break-large: 1200px;
 	background-color: $grisLab;
 }
 #lista{
-	margin: $margen-cero;
-	width: $col-size * 3;
-	display: $display-grid;
+	@include tamaño;
 	@media screen and (max-width: $break-small) {
     width: 100%;
     margin-left: -20px;
@@ -56,10 +38,8 @@ $break-large: 1200px;
   }
 }
 #descripcion{
-	width: $col-size * 5;
 	text-align: $texto-justificado;
-	margin: $margen-cero;
-	display: $display-grid;
+	@include tamaño(width: $col-size * 5)
 	@media screen and (max-width: $break-small) {
     width: 100%;
     margin: $margen-cero;
@@ -67,11 +47,8 @@ $break-large: 1200px;
 }
 .aside{
 	background-color: $grisLab;
-	text-align: $texto-centrado;
-	color: $texto-blanco;
-	margin: $margen-cero;
-	width: $col-size * 3;
-	display: $display-grid;
+	@include fuente;
+	@include tamaño;
 	padding: 0;
 	@media screen and (max-width: $break-small) {
     width: 100%;
@@ -84,9 +61,8 @@ $break-large: 1200px;
 }
 #footer{
 	width: $col-size * 12;
-	text-align: $texto-centrado;
 	background-color: $grisLab;
-	color: $texto-blanco;
+	@include fuente;
 	padding: $padding-lista;
 	margin-top: $margen-lista;
 	margin-right: $margen-cero;
