@@ -1,9 +1,0 @@
-@mixin tamaño($margen-cero, $width, $display) {
-	margin: $margen-cero;
-	width: $col-size * 3;
-	display: $display-grid;
-}
-@mixin fuente($texto-blanco, $texto-centrado) {
-	text-align: $texto-centrado;
-	color: $texto-blanco;
-}

@@ -8,11 +8,11 @@ var $listaAsistencia = $("#lista-asistencia");
 var plantilla = '<li>***nombre***<input type="checkbox"> </li>';
 
 var api = {
-  url: 'https://laboratoria.cuadra.co:9339/api/v1/students/'
+  url: 'http://laboratoria.cuadra.co:9339/api/v1/students/'
 };
 
 var cargarAlumnas = function(){
-	$.getJSON(api.id, function(alumnas){
+	$.getJSON(api.url, function(alumnas){
 		alumnas.forEach(mostrarAlumnas);
 	});
 };

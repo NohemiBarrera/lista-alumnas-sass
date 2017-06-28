@@ -1,6 +1,11 @@
 @import 'mixin';
 @import 'variables';
 
+body{
+	margin: $margen-cero;
+	padding: $padding-cero;
+}
+
 #capitan{
 	background-color: $amarilloLab;
 	width: $col-size * 12;
@@ -8,6 +13,7 @@
 	padding: $padding-titulo;
 	color: $texto-blanco;
 	font-size: $font-size-titulo;
+	box-sizing: border-box;
 }
 
 #liAmarillo{
@@ -27,7 +33,9 @@
 	background-color: $grisLab;
 }
 #lista{
-	@include tamaño;
+	margin: $margen-cero;
+	width: $col-size * 3;
+	display: $display-grid;
 	@media screen and (max-width: $break-small) {
     width: 100%;
     margin-left: -20px;
@@ -39,7 +47,8 @@
 }
 #descripcion{
 	text-align: $texto-justificado;
-	@include tamaño(width: $col-size * 5)
+	width: $col-size *5;
+	margin: $margen-cero;
 	@media screen and (max-width: $break-small) {
     width: 100%;
     margin: $margen-cero;
@@ -47,8 +56,11 @@
 }
 .aside{
 	background-color: $grisLab;
-	@include fuente;
-	@include tamaño;
+	text-align: $texto-centrado;
+	color: $texto-blanco;
+	margin: $margen-cero;
+	width: $col-size * 3;
+	display: $display-grid;
 	padding: 0;
 	@media screen and (max-width: $break-small) {
     width: 100%;
@@ -62,8 +74,10 @@
 #footer{
 	width: $col-size * 12;
 	background-color: $grisLab;
-	@include fuente;
+	text-align: $texto-centrado;
+	color: $texto-blanco;
 	padding: $padding-lista;
 	margin-top: $margen-lista;
 	margin-right: $margen-cero;
+	box-sizing: border-box;
 }
